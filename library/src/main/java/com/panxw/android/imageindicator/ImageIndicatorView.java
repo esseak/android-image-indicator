@@ -24,7 +24,7 @@ import java.util.List;
  * user guide, image indicator
  *
  * @author savant-pan
- * 
+ *
  */
 public class ImageIndicatorView extends RelativeLayout {
 	/**
@@ -167,7 +167,7 @@ public class ImageIndicatorView extends RelativeLayout {
 
 	/**
 	 * add single View
-	 * 
+	 *
 	 * @param view
 	 */
 	public void addViewItem(View view) {
@@ -196,7 +196,7 @@ public class ImageIndicatorView extends RelativeLayout {
 
 	/**
 	 * set Drawable array
-	 * 
+	 *
 	 * @param resArray
 	 *            Drawable array
 	 */
@@ -231,10 +231,10 @@ public class ImageIndicatorView extends RelativeLayout {
 			}
 		}
 	}
-	
+
 	/**
 	 * 设置显示 网络图片，使用ImageLoader 加载网络图片，需要提前配置ImageLoader
-	 * 
+	 *
 	 */
 	public void setupLayoutByURL(final List<String> urllist) {
 		if (urllist == null)
@@ -250,17 +250,16 @@ public class ImageIndicatorView extends RelativeLayout {
 			for (int i = 0; i < len; i++) {
 				final ImageView pageItem = new ImageView(getContext());
 				ImageLoader.getInstance().displayImage(
-						Constants.getRequestHost() + urllist.get(i), pageItem,
-						Utils.getOptions());
+						urllist.get(i), pageItem );
 				addViewItem(pageItem);
 			}
 		}
 	}
-	
+
 
 	/**
 	 * set show item current
-	 * 
+	 *
 	 * @param index
 	 *            postion
 	 */
@@ -270,7 +269,7 @@ public class ImageIndicatorView extends RelativeLayout {
 
 	/**
 	 * set anchor style, default INDICATOR_ARROW_ROUND_STYLE
-	 * 
+	 *
 	 * @param style
 	 *            INDICATOR_USERGUIDE_STYLE or INDICATOR_ARROW_ROUND_STYLE
 	 */
@@ -280,7 +279,7 @@ public class ImageIndicatorView extends RelativeLayout {
 
 	/**
 	 *  add OnItemChangeListener
-	 * 
+	 *
 	 * @param onItemChangeListener  callback
 	 */
 	public void setOnItemChangeListener(OnItemChangeListener onItemChangeListener) {
@@ -292,7 +291,7 @@ public class ImageIndicatorView extends RelativeLayout {
 
 	/**
 	 * add setOnItemClickListener
-	 * 
+	 *
 	 * @param onItemClickListener
 	 */
 	public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -413,7 +412,7 @@ public class ImageIndicatorView extends RelativeLayout {
 			}
 		}
 	}
-	
+
 	/**
 	 * ScrollIndicateHandler
 	 */
